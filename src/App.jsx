@@ -14,9 +14,9 @@ const App = () => {
     <>
       {/* <Counter/> */}
       {/* <EleRendering/> */}
-      <MovieCart />
+      {/* <MovieCart /> */}
       {/* <ImgPath/> */}
-      {/* <ListWithDel /> */}
+      <ListWithDel />
       {/* <UseEffect/> */}
       {/* <ClassComponentCounter/> */}
       {/* <JsonApi/> */}

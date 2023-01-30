@@ -53,9 +53,7 @@ let list = {
 };
 const ListWithDel = () => {
   const [ArrayItems, setArrayItems] = useState(fruits);
-  const [HideDelete, setHideDelete] = useState(true);
   const [checked, setChecked] = useState(fruits);
-
  
 let deleteObj = (obj, item) => {
   const updatedData = obj.filter((obj) => obj.name !== item);;
@@ -68,13 +66,12 @@ let deleteObj = (obj, item) => {
     flag = flag.toLowerCase();
     if (flag === "yes") {
       let newArrayItems = deleteObj(ArrayItems,item);
-      console.log(newArrayItems);
+      // console.log(newArrayItems);
       setArrayItems(newArrayItems);
       alert("Item is deleted successfully");
     } else {
       setArrayItems(ArrayItems);
       setChecked(true);
-
       alert("OK NP");
     }
     setChecked(true);
@@ -82,21 +79,29 @@ let deleteObj = (obj, item) => {
 
 
 
-  const updatedArray=(ele) => {
-    checked.map((i) => {
-      if (i.name===ele.name) {
-        return { ...checked,isChecked:true};
-      }
-      return checked;
-    });
+  const updatedArray=(ele,index) => {
+    // console.log(ele.isChecked+" index is "+index)
+   const newState = ArrayItems.map((obj) =>
+     obj.name ===ele.name ? { ...obj, isChecked: true } : obj
+   );
+   return newState;
+
   }
+  const updatedArray_Unchecked = (ele, index) => {
+    // console.log(ele.isChecked + " index is " + index);
+    const newState = ArrayItems.map((obj) =>
+      obj.name === ele.name ? { ...obj, isChecked: false } : obj
+    );
+    return newState;
+  };
 
 
-  const handleChangeCheckbox = (e, ele) => {
+  const handleChangeCheckbox = (e, ele,index) => {
+    console.log("Clicked");
     if (e.target.checked) {
-      setChecked(updatedArray(ele.name));
+      setArrayItems(updatedArray(ele,index));
     } else {
-      setChecked(checked);
+      setArrayItems(updatedArray_Unchecked(ele,index));
     }
   };
 
@@ -108,19 +113,23 @@ let deleteObj = (obj, item) => {
           style={{
             width: "100%",
             display: "flex",
+            color:'green',
+            fontFamily:'sans-serif',
+            textAlign: 'center',
+            textTransform:'uppercase',
             flexDirection: "column",
             alignItems: "center",
             gap: "2rem",
           }}
         >
-          {ArrayItems.map((ele, index) => {
+          { ArrayItems && ArrayItems.map((ele, index) => {
             return (
               <div className="container-ListWithDel" key={ele.name.toString()}>
                 <input
                   type="checkbox"
                   name="check"
                   id=""
-                  onClick={(e) => handleChangeCheckbox(e, ele)}
+                  onChange={(e) => handleChangeCheckbox(e, ele,index)}
                 />
                 <span>
                   {ele.name}

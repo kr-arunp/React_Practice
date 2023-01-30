@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function 
-() {
-  return (
-	<div>
-	</div>
-  )
+export default class SinglePost extends Component {
+  render() {
+	return (
+	  <div>SinglePost</div>
+	)
+  }
 }
 
-export default 
