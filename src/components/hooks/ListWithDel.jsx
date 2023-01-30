@@ -76,9 +76,6 @@ let deleteObj = (obj, item) => {
     }
     setChecked(true);
   };
-
-
-
   const updatedArray=(ele,index) => {
     // console.log(ele.isChecked+" index is "+index)
    const newState = ArrayItems.map((obj) =>

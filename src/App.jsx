@@ -9,6 +9,8 @@ import UseEffect from "./components/hooks/UseEffect";
 import UseReducerExample from "./components/hooks/UseReducerExample";
 // import ImgPath from "./components/ImgPath";
 import { MovieCart } from "./components/MovieCart";
+import { UserInfo } from "./components/GithubUserDataFetchApi/UserInfo";
+import FindUserDataByUserID from "./components/GithubUserDataFetchApi/FindUserDataByUserID";
 const App = () => {
   return (
     <>
@@ -16,11 +18,13 @@ const App = () => {
       {/* <EleRendering/> */}
       {/* <MovieCart /> */}
       {/* <ImgPath/> */}
-      <ListWithDel />
+      {/* <ListWithDel /> */}
       {/* <UseEffect/> */}
       {/* <ClassComponentCounter/> */}
       {/* <JsonApi/> */}
       {/* <UseReducerExample/> */}
+      {/* <UserInfo/> */}
+      <FindUserDataByUserID/>
     </>
   );
 };
