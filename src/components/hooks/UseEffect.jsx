@@ -7,8 +7,11 @@ const UseEffect = () => {
 	  setCount((prevCount)=>prevCount+1)
 	}
 	useEffect(()=>{
-		let IntervalId=setInterval(counter,1000)
-		return () => clearInterval(IntervalId);
+		const main = async () => {
+      let IntervalId = setInterval(counter, 1000);
+      return () => clearInterval(IntervalId);
+    };
+    main();
 	},[])
   return (
   <>
