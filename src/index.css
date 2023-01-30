@@ -121,3 +121,30 @@ a:hover {
   color: white;
   text-decoration: none;
 }
+
+.container-ListWithDel{
+   width: 30%;
+   display:flex;
+   justify-content:space-between;
+   border:1px solid #ccc;
+   margin-right:2rem;
+   padding: 1rem;
+   font-size: 1.4rem;
+}
+.container-ListWithDel ul {
+
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  font-size:1.2rem;
+  gap: 2rem;
+}
+.container-ListWithDel li{
+   list-style-type: none;
+   list-style-position: inside;
+   margin-bottom: 1rem;
+  
+}
+.container-ListWithDel i{
+  cursor: pointer;
+}
