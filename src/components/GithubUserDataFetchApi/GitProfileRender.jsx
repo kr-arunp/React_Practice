@@ -1,6 +1,6 @@
-import React from 'react'
-import './githubSingleUser.css'
-const GitProfileRender = ({UsersData}) => {
+import React from "react";
+import "./githubSingleUser.css";
+const GitProfileRender = ({ UsersData }) => {
   return (
     <>
       <div className="user-card">
@@ -10,26 +10,37 @@ const GitProfileRender = ({UsersData}) => {
         <p className="username">{UsersData.login}</p>
         <div className="info">
           <p>
-            <a href={UsersData.html_url} target="_blank">MY Profile</a>
+            <a href={UsersData.html_url} target="_blank">
+              MY Profile
+            </a>
           </p>
-          <p>You Work For-{UsersData.company}</p>
+          <p>Work For-{UsersData.company}</p>
           <p>
-            <a href={UsersData.blog}>See My Blog</a>
+            <a href={UsersData.blog} target="_blank">
+              See My Blog
+            </a>
           </p>
           <p>{UsersData.email}</p>
           <p
-          style={{width:'22rem',textOverflow:'hidden',
-          whiteSpace: 'pre-line',
-        overflowY: 'scroll',
-          
-          }}
-          >{UsersData.bio}</p>
+            style={{
+              width: "22rem",
+              textOverflow: "hidden",
+              whiteSpace: "pre-line",
+              overflowY: "scroll",
+            }}
+          >
+            {UsersData.bio}
+          </p>
           <p>
-            <a href={`https://twitter.com/${UsersData.twitter_username}`} target="_blank">
+            <a
+              href={`https://twitter.com/${UsersData.twitter_username}`}
+              target="_blank"
+            >
               @MyTwitter{UsersData.twitter_username}
             </a>
           </p>
         </div>
+           {/* <span>Address {UsersData.location}</span> */}
         <div className="stats">
           <p>Repos: {UsersData.public_repos}</p>
           <p>Following: {UsersData.following}</p>
@@ -42,4 +53,4 @@ const GitProfileRender = ({UsersData}) => {
   );
 };
 
-export default GitProfileRender
+export default GitProfileRender;

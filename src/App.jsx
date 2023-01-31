@@ -11,6 +11,7 @@ import UseReducerExample from "./components/hooks/UseReducerExample";
 import { MovieCart } from "./components/MovieCart";
 import { UserInfo } from "./components/GithubUserDataFetchApi/UserInfo";
 import FindUserDataByUserID from "./components/GithubUserDataFetchApi/FindUserDataByUserID";
+import { Parent_Fun } from "./components/DataTransfer/Parent_Fun";
 const App = () => {
   return (
     <>
@@ -24,7 +25,8 @@ const App = () => {
       {/* <JsonApi/> */}
       {/* <UseReducerExample/> */}
       {/* <UserInfo/> */}
-      <FindUserDataByUserID/>
+      {/* <FindUserDataByUserID/> */}
+      <Parent_Fun/>
     </>
   );
 };

@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import './githubSingleUser.css'
-import GitProfileRender from './GitProfileRender';
+import "./githubSingleUser.css";
+import GitProfileRender from "./GitProfileRender";
 function FindUserDataByUserID() {
   const [UsersData, setUsersData] = useState([]);
-  const [Url, setUrl] = useState(`https://api.github.com/users/${"arunkumar201"}`)
-const [Input, setInput] = useState("arunkumar201");
+  
+  const [Url, setUrl] = useState(
+    `https://api.github.com/users/${"arunkumar201"}`
+  );
+  const [Input, setInput] = useState("arunkumar201");
+  
   useEffect(() => {
     getUsersData();
   }, [Url]);
@@ -14,40 +18,42 @@ const [Input, setInput] = useState("arunkumar201");
     await axios
       .get(Url)
       .then((res) => {
-        // console.log(res.data);
         setUsersData(res.data);
       })
       .catch((err) => {
-        console.log("error");
+      alert(`Username ${UsersData.login}Not Found`);
+        setUsersData([]);
       });
   };
- //On change Handler
- let ChangeHandler=(e)=>{
-   setInput(e.target.value);
-     
-  }
-  
-  let EnterKeyHandler=(e)=>{
-   if (e.keyCode === 13) {
-     ClickHandler();
-   }
-  }
-  let ClickHandler=()=>{
+  //On change Handler
+  let ChangeHandler = (e) => {
+    setInput(e.target.value);
+  };
+
+  let EnterKeyHandler = (e) => {
+    if (e.keyCode === 13) {
+      ClickHandler();
+    }
+  };
+  let ClickHandler = () => {
     let URL = `https://api.github.com/users/${Input}`;
     setUrl(URL);
-  }
-  
+    setInput("");
+  };
+
   return (
     <div>
       <h1>Github Profile Generator</h1>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{ display: "flex", justifyContent: "center", height: "10vh" }}
+      >
         <input
           type="text"
           placeholder="Your Username..."
           value={Input}
           onChange={ChangeHandler}
           className="Input-Element"
-            onKeyDown={EnterKeyHandler}
+          onKeyDown={EnterKeyHandler}
         />
         <button
           style={{
@@ -62,9 +68,13 @@ const [Input, setInput] = useState("arunkumar201");
           Get Data
         </button>
       </div>
-      <GitProfileRender UsersData={UsersData} />
+      {UsersData.length == 0 ? (
+        <h3>UserName Not Found</h3>
+      ) : (
+        <GitProfileRender UsersData={UsersData} />
+      )}
     </div>
   );
 }
 
-export default FindUserDataByUserID
+export default FindUserDataByUserID;
