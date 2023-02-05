@@ -1,5 +1,8 @@
 import React from "react";
 import Intro from "./components/HOF's/Intro";
+import MainCounter from "./components/hooks/ContextAPI/MainCounter";
+import Parent from "./components/hooks/ContextAPI/Parent";
+import UseContextHookExample from "./components/hooks/ContextAPI/UseContextHookExample";
 // import ClassComponentCounter from "./components/hooks/ClassComponentCounter";
 // import ClasssComponetCounter from "./components/hooks/ClassComponentCounter";
 // import UncontrolledInput from "./components/hooks/UncontrolledInput";
@@ -39,7 +42,11 @@ const App = () => {
      {/* <UncontrolledInput/> */}
      {/* <Intro/> */}
      {/* <PopDrilling/> */}
-     <UseContextExample />
+     {/* <UseContextExample /> */}
+     {/* <Parent/> */}
+    {/* <UseContextHookExample/> */}
+    <MainCounter/>
+  
     </>
   );
 };
