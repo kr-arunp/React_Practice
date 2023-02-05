@@ -3,6 +3,8 @@ import Intro from "./components/HOF's/Intro";
 import MainCounter from "./components/hooks/ContextAPI/MainCounter";
 import Parent from "./components/hooks/ContextAPI/Parent";
 import UseContextHookExample from "./components/hooks/ContextAPI/UseContextHookExample";
+import ContactManager from "./components/hooks/UseReducer/ContactManager";
+import UseReducerExample from "./components/hooks/UseReducer/UseReducerExample";
 // import ClassComponentCounter from "./components/hooks/ClassComponentCounter";
 // import ClasssComponetCounter from "./components/hooks/ClassComponentCounter";
 // import UncontrolledInput from "./components/hooks/UncontrolledInput";
@@ -45,7 +47,9 @@ const App = () => {
      {/* <UseContextExample /> */}
      {/* <Parent/> */}
     {/* <UseContextHookExample/> */}
-    <MainCounter/>
+    {/* <MainCounter/> */}
+    {/* <UseReducerExample/> */}
+    <ContactManager/>
   
     </>
   );
