@@ -1,8 +1,8 @@
 import React from "react";
 import Intro from "./components/HOF's/Intro";
 // import ClassComponentCounter from "./components/hooks/ClassComponentCounter";
-import ClasssComponetCounter from "./components/hooks/ClassComponentCounter";
-import UncontrolledInput from "./components/hooks/UncontrolledInput";
+// import ClasssComponetCounter from "./components/hooks/ClassComponentCounter";
+// import UncontrolledInput from "./components/hooks/UncontrolledInput";
 // import JsonApi from "./components/hooks/JsonApi";
 // import ListWithDel from "./components/hooks/ListWithDel";
 // import Counter from "./components/Counter";
@@ -15,8 +15,10 @@ import UncontrolledInput from "./components/hooks/UncontrolledInput";
 // import FindUserDataByUserID from "./components/GithubUserDataFetchApi/FindUserDataByUserID";
 // import { Parent_Fun } from "./components/DataTransfer/Parent_Fun";
 // import Parent_Class from "./components/DataTransfer/Parent_Class";
-import UseRefExample from "./components/hooks/UseRefExample";
+// import UseRefExample from "./components/hooks/UseRefExample";
+// import UseContextExample from "./components/hooks/useContextExample";
 const App = () => {
+  // import PopDrilling from "./components/hooks/PopDrilling";
   return (
     <>
       {/* <Counter/> */}
@@ -35,7 +37,9 @@ const App = () => {
       
      {/* <UseRefExample/> */}
      {/* <UncontrolledInput/> */}
-     <Intro/>
+     {/* <Intro/> */}
+     {/* <PopDrilling/> */}
+     <UseContextExample />
     </>
   );
 };
