@@ -63,17 +63,7 @@ const ContactManager = () => {
 const listStyle = {
   width: "50%",
   backgroundColor: "gold",
-  display: "flex",
-  flexDirection: "column",
-  textAlign: "center",
-  alignItems: "center",
-  justifyContent: "center",
-  color:'white',
-   display:'inline-table',
-      padding: '10px 0px',
-      borderRadius:'1.4rem',
-      fontSize:'4rem'
-};
+}
   return (
     <>
       <div

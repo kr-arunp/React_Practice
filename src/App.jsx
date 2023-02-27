@@ -1,10 +1,14 @@
 import React from "react";
-import Intro from "./components/HOF's/Intro";
-import MainCounter from "./components/hooks/ContextAPI/MainCounter";
-import Parent from "./components/hooks/ContextAPI/Parent";
-import UseContextHookExample from "./components/hooks/ContextAPI/UseContextHookExample";
-import ContactManager from "./components/hooks/UseReducer/ContactManager";
-import UseReducerExample from "./components/hooks/UseReducer/UseReducerExample";
+import Intro from "../public/components/HOF's/Intro";
+import MainCounter from "../public/components/hooks/ContextAPI/MainCounter";
+import Parent from "../public/components/hooks/ContextAPI/Parent";
+import UseContextHookExample from "../public/components/hooks/ContextAPI/UseContextHookExample";
+import Document_Title from "../public/components/hooks/useeffect/Document_Title";
+import Fetching from "../public/components/hooks/useeffect/Fetching";
+import ContactManager from "../public/components/hooks/UseReducer/ContactManager";
+import UseReducerExample from "../public/components/hooks/UseReducer/UseReducerExample";
+import NavAndTabs from "../public/components/ReactBootStrap/NavAndTabs";
+import ResponsiveNavBar from "../public/components/ReactBootStrap/ResponsiveNavBar";
 // import ClassComponentCounter from "./components/hooks/ClassComponentCounter";
 // import ClasssComponetCounter from "./components/hooks/ClassComponentCounter";
 // import UncontrolledInput from "./components/hooks/UncontrolledInput";
@@ -22,36 +26,68 @@ import UseReducerExample from "./components/hooks/UseReducer/UseReducerExample";
 // import Parent_Class from "./components/DataTransfer/Parent_Class";
 // import UseRefExample from "./components/hooks/UseRefExample";
 // import UseContextExample from "./components/hooks/useContextExample";
+// import PopDrilling from "./components/hooks/PopDrilling";
+import useStateExample from "../public/components/useStateExample";
+import WindowSizeCalculator from "../public/components/hooks/useeffect/windowSize";
+import Intervals from "../public/components/hooks/useeffect/Intervals";
+import SimpleExample, { MemoCounter } from "../public/components/hooks/UseMemo/SimpleExample";
+import Example2,{MemoExample2} from "../public/components/hooks/UseMemo/Example2";
+import HoverFocus from "../public/components/hooks/ContextAPI/useRefExamples.jsx/HoverFocus";
+import UseCallbackExample from "../public/components/hooks/UseCallbackExample";
+import Parent_callBack from "../public/components/hooks/CallBackHook/Parent";
+
+
+
+
+
+
+
+
+
+
 const App = () => {
-  // import PopDrilling from "./components/hooks/PopDrilling";
-  return (
-    <>
-      {/* <Counter/> */}
-      {/* <EleRendering/> */}
-      {/* <MovieCart /> */}
-      {/* <ImgPath/> */}
-      {/* <ListWithDel /> */}
-      {/* <UseEffect/> */}
-      {/* <ClassComponentCounter/> */}
-      {/* <JsonApi/> */}
-      {/* <UseReducerExample/> */}
-      {/* <UserInfo/> */}
-      {/* <FindUserDataByUserID/> */}
-      {/* <Parent_Fun/> */}
-      {/* <Parent_Class/> */}
-      
-     {/* <UseRefExample/> */}
-     {/* <UncontrolledInput/> */}
-     {/* <Intro/> */}
-     {/* <PopDrilling/> */}
-     {/* <UseContextExample /> */}
-     {/* <Parent/> */}
+return (
+  <>
+    {/* <Counter/> */}
+    {/* <EleRendering/> */}
+    {/* <MovieCart /> */}
+    {/* <ImgPath/> */}
+    {/* <ListWithDel /> */}
+    {/* <UseEffect/> */}
+    {/* <ClassComponentCounter/> */}
+    {/* <JsonApi/> */}
+    {/* <UseReducerExample/> */}
+    {/* <UserInfo/> */}
+    {/* <FindUserDataByUserID/> */}
+    {/* <Parent_Fun/> */}
+    {/* <Parent_Class/> */}
+
+    {/* <UseRefExample/> */}
+    {/* <UncontrolledInput/> */}
+    {/* <Intro/> */}
+    {/* <PopDrilling/> */}
+    {/* <UseContextExample /> */}
+    {/* <Parent/> */}
     {/* <UseContextHookExample/> */}
     {/* <MainCounter/> */}
     {/* <UseReducerExample/> */}
-    <ContactManager/>
-  
-    </>
-  );
+    {/* <ContactManager/> */}
+    {/* <NavAndTabs/> */}
+    {/* <ResponsiveNavBar/> */}
+    {/* <ResponsiveNavBar/> */}
+    {/* <useStateExample/> */}
+    {/* <Document_Title/> */}
+    {/* <Fetching/>   */}
+    {/* <WindowSizeCalculator/> */}
+    {/* <Intervals/> */}
+    {/* <SimpleExample/> */}
+    {/* <MemoCounter/> */}
+    <Example2/>
+    {/* <MemoExample2 /> */}
+    {/* <HoverFocus/> */}
+    {/* <UseCallbackExample/> */}
+    {/* <Parent_callBack/> */}
+  </>
+);
 };
 export default App;
